@@ -29,7 +29,7 @@ $user_name = "Князев Константин"; //
         <nav class="user-menu">
 
         <?php
-    if($is_auth == 1):?>
+    if($is_auth == 1): ?>
 
         <div class="user-menu__logged">
     <p>
@@ -39,19 +39,21 @@ $user_name = "Князев Константин"; //
     <a class="user-menu__logout" href="#">Выход</a>
   </div>
 
-<?endif;?>
+<? endif ?>
 
-     <?php
+  <?php
       if ( $is_auth == 0 ): ?>
-       <ul class="user-menu__list">
+      
+    <ul class="user-menu__list">
     <li class="user-menu__item">
       <a href="#">Регистрация</a>
     </li>
     <li class="user-menu__item">
       <a href="#">Вход</a>
     </li>
-  </ul>
-  <?php endif; ?>
+  </ul
+
+<?php endif; ?>
 
     </nav
 
