@@ -1,9 +1,8 @@
 <?php
 $is_auth = rand(0, 1);
-
 $user_name = ''; // укажите здесь ваше имя
-$massiv1 = [ "Доски и лыжи", "Крепления", 'Ботинки', "Одежда","Инструменты", "Разное"];
-$massiv2 = [
+$categories = [ "Доски и лыжи", "Крепления", 'Ботинки', "Одежда","Инструменты", "Разное"];
+$ads = [
   [
      'name' => '2014 Rossignol District Snowboard',
      'category' => 'Доски и лыжи',
@@ -26,12 +25,12 @@ $massiv2 = [
   'URL' => 'img/lot-4.jpg'
   ],
   ['name' => 'Куртка для сноуборда DC Mutiny Charocal',
-  'category' => 'Доски и лыжи',
+  'category' => 'Одежда',
   'price' => '7500',
   'URL' => 'img/lot-5.jpg'
   ],
   ['name' => 'Маска Oakley Canopy',
-  'category' => 'Доски и лыжи',
+  'category' => 'Разное',
   'price' => '5400',
   'URL' => 'img/lot-6.jpg'
   ]
@@ -75,7 +74,7 @@ $massiv2 = [
         <p class="promo__text">На нашем интернет-аукционе ты найдёшь самое эксклюзивное сноубордическое и горнолыжное снаряжение.</p>
         <ul class="promo__list">
             <!--заполните этот список из массива категорий-->
-          <?php foreach($massiv1 as $value): ?>
+          <?php foreach($categories as $value): ?>
             <li class="promo__item promo__item--boards">
                 <a class="promo__link" href="pages/all-lots.html"><?=$value;?></a>
             </li>
@@ -88,7 +87,7 @@ $massiv2 = [
         </div>
         <ul class="lots__list">
 
-            <?php foreach($massiv2 as $item): ?>
+            <?php foreach($ads as $item): ?>
             <!--заполните этот список из массива с товарами-->
             <li class="lots__item lot">
                 <div class="lot__image">
@@ -118,7 +117,7 @@ $massiv2 = [
     <nav class="nav">
         <ul class="nav__list container">
             <!--заполните этот список из массива категорий-->
-            <?php foreach($massiv1 as $value): ?>
+            <?php foreach($categories as $value): ?>
             <li class="nav__item">
                 <a href="pages/all-lots.html"><?=$value;?></a>
             </li>
