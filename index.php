@@ -2,7 +2,7 @@
 $is_auth = rand(0, 1);
 $user_name = ''; // укажите здесь ваше имя
 $categories = [ "Доски и лыжи", "Крепления", 'Ботинки', "Одежда","Инструменты", "Разное"];
-$ads = [
+$ad = [
   [
      'name' => '2014 Rossignol District Snowboard',
      'category' => 'Доски и лыжи',
