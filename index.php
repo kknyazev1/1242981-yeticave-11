@@ -42,13 +42,13 @@ function form($arg)
 {
     if (ceil($arg) < 1000) {
 
-        echo $arg,' ', "₽";
-    return;
+        return $arg.' '. "₽";
+
     }
     elseif (ceil($arg) > 1000) {
     $arg = number_format($arg,0,'0',' ');
-    echo $arg,' ', "₽";
-    return;
+    return $arg.' '. "₽";
+
     }
   }
   ?>
