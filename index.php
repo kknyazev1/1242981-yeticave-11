@@ -41,11 +41,14 @@ $ads = [
 function form($arg)
 {
     if (ceil($arg) < 1000) {
-        echo "$arg\n";
-  }
+
+        echo $arg,' ', "₽";
+    return;
+    }
     elseif (ceil($arg) > 1000) {
     $arg = number_format($arg,0,'0',' ');
     echo $arg,' ', "₽";
+    return;
     }
   }
   ?>
@@ -113,7 +116,7 @@ function form($arg)
                     <div class="lot__state">
                         <div class="lot__rate">
                             <span class="lot__amount">Стартовая цена</span>
-                            <span class="lot__cost"><?php form($ad ['price']);?></span>
+                            <span class="lot__cost"><?=form($ad ['price']);?></span>
                         </div>
                         <div class="lot__timer timer">
                             12:23
