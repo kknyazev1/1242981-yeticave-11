@@ -45,7 +45,7 @@ function form($arg)
         return $arg.' '. "₽";
 
     }
-    elseif (ceil($arg) > 1000) {
+    elseif (ceil($arg) >= 1000) {
     $arg = number_format($arg,0,'0',' ');
     return $arg.' '. "₽";
 
