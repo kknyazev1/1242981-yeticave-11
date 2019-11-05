@@ -42,12 +42,11 @@ $user_name = ''; // укажите здесь ваше имя
     <nav class="nav">
         <ul class="nav__list container">
             <!--заполните этот список из массива категорий-->
-            <?php foreach($categories as $value); ?>
-            <?=include_tamplate('item.php','value' => $value);?>
+            <?php foreach($categories as $value): ?>
             <li class="nav__item">
                 <a href="pages/all-lots.html"><?=$value;?></a>
             </li>
-            <?php endforeach ?>
+          <?php endforeach;?>
         </ul>
     </nav>
     <div class="main-footer__bottom container">
