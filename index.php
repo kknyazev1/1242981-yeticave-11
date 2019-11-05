@@ -32,7 +32,7 @@ $ads = [
   'category' => 'Разное',
   'price' => '5400',
   'URL' => 'img/lot-6.jpg'
-];
+]];
 $page_content = include_template('main.php', ['ads' => $ads, 'categories' => $categories]);
 $layout_content = include_template('layout.php',[
   'categories' => $categories,
