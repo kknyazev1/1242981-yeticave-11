@@ -1,4 +1,14 @@
 <?php
+function form($arg)
+{
+    if (ceil($arg) < 1000) {
+        return $arg.' '. "₽";
+    }
+    else {
+    $arg = number_format($arg,0,'0',' ');
+    return $arg.' '. "₽";
+    }
+  };
 require_once 'helpers.php';
 $categories = [ "Доски и лыжи", "Крепления", 'Ботинки', "Одежда","Инструменты", "Разное"];
 $ads = [
