@@ -1,3 +1,15 @@
+<?php
+function form($arg)
+{
+    if (ceil($arg) < 1000) {
+        return $arg.' '. "₽";
+    }
+    else {
+    $arg = number_format($arg,0,'0',' ');
+    return $arg.' '. "₽";
+    }
+  };
+  ?>
 <section class="promo">
         <h2 class="promo__title">Нужен стафф для катки?</h2>
         <p class="promo__text">На нашем интернет-аукционе ты найдёшь самое эксклюзивное сноубордическое и горнолыжное снаряжение.</p>
@@ -32,7 +44,7 @@
                     <div class="lot__state">
                         <div class="lot__rate">
                             <span class="lot__amount">Стартовая цена</span>
-                            <span class="lot__cost"><?=$item['price'];?><?=form($ad ['price']);?></span>
+                            <span class="lot__cost"><?=form($item ['price']);?></b></span>
                         </div>
                         <div class="lot__timer timer">
                             12:23
